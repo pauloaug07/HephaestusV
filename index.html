@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        #main {
+            text-align: center;
+        }
+        #main nav {
+            font-size: 1.5em;
+            margin-top: 1em;
+            margin-bottom: 1em;
+        }
+        #main nav span {
+            display: inline-block;
+            padding: .25em;
+            border: 1px solid black;
+            border-radius: .25em;
+        }
+        @keyframes nav {
+            from {
+                color: black;
+                background-color: white;
+            }
+            to {
+                color: white;
+                background-color: black;
+            }
+        }
+        #main nav span:hover {
+            cursor: pointer;
+            animation: nav 150ms ease-in-out;
+            animation-fill-mode: both;
+            animation-direction: alternate;
+        }
+        #main #about {
+            margin-left: 1em;
+            text-align: left;
+        }
+    </style>
+    <div id="main">
+        <h1>Title</h1>
+        <nav>
+            <span>Sobre</span>
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+        </nav>
+        <img width="100%" height="850em" src="./124801497.jpg" alt="">
+        <div id="about">
+            <h1>Sobre:</h1>
+            <p>somos</p>
+        </div>
+    </div>
+</body>
+</html>
