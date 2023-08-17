@@ -4,22 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="alternate" hreflang="en" href="/en-us"> -->
+    <!-- <link rel="alternate" hreflang="pt" href="/pt-br"> -->
     <title>Document</title>
 </head>
 <body>
     <style>
         body {
+            /* font-family: Arial, Helvetica, sans-serif; */
             margin: 0em;
         }
-        #main {
-            text-align: center;
-        }
-        #main nav {
+        #title nav {
+            float: right;
+            margin-right: 1em;
+            margin-left: 1em;
             font-size: 1.5em;
             margin-top: 1em;
             margin-bottom: 1em;
         }
-        #main nav a {
+        @media (max-width: 615px) {
+            #title nav {
+                display: none;
+            }
+        }
+        #title nav a {
             color: black;
             text-decoration: none;
             padding: .25em;
@@ -36,7 +44,7 @@
                 background-color: black;
             }
         }
-        #main nav a:hover {
+        #title nav a:hover {
             cursor: pointer;
             animation: nav 150ms ease-in-out;
             animation-fill-mode: both;
@@ -48,36 +56,149 @@
             margin-right: 1em;
             margin-top: .525em;
         }
-        #title nav {
-            float: right;
-            margin-right: 1em;
-            margin-left: 1em;
+        #banner {
+            padding: 0em;
         }
-        #main img {
+        #banner img {
             width: 100%;
             height: 40em;
         }
-        @media (max-width: 915px) {
-            #title nav {
-                display: none;
-            }
+        #content div {
+            padding-left: 1em;
+            padding-right: 1em;
+        }
+        #content div p {
+            padding-left: 1em;
+            padding-right: 1em;
+        }
+        #content div h1 {
+            border-bottom: 1px solid black;
+        }
+        #about {
+            color: white;
+            background-color: black;
+            font-size: 1.5em;
+            text-align: center;
+            padding: 10em;
+            margin: 0em;
+        }
+        #about h1 {
+            display: inline-block;
+            margin: 0em;
+        }
+        #about #a {
+            padding-left: .2em;
+            color: rgb(200, 0, 0);
+        }
+        #team #flex {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            text-align: center;
+        }
+        #team #flex div {
+            margin: .1em;
+        }
+        #team #flex div h3 {
+            margin: 0em;
+        }
+        #team #flex div p {
+            max-width: 12em;
+            padding: 1em;
+            padding-top: .25em;
+            padding-bottom: .25em;
+            margin: 0em;
+            overflow-wrap: break-word;
+        }
+        #team #flex div span {
+            color: red;
+            background-color: black;
+            display: inline-block;
+            margin-top: .2em;
+            padding: .1em;
+            padding-left: .5em;
+            padding-right: .5em;
+            border: 1px solid black;
+            border-radius: 1em;
+        }
+        #footer {
+            color: white;
+            background-color: black;
+            padding: 2em;
         }
     </style>
     <div id="main">
-        <div id="title">
-            <h1>Hephaestus V</h1>
-            <nav>
-                <a href="#about">Sobre</a>
-                <a>13213213145</a>
-                <a>123251</a>
-                <a>15123719233219837198237</a>
-            </nav>
+        <header id="header">
+            <div id="title">
+                <h1>Hephaestus V</h1>
+                <nav>
+                    <a href="#about">About</a>
+                    <a href="#goals">Goals</a>
+                    <a href="#team">Team</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+            </div>
+            <div id="banner">
+                <img src="./124801497.jpg" alt="">
+            </div>
+        </header>
+        <div id="content">
+            <div id="about">
+                <h1>We're a team of</h1> <h1 id="a">Students</h1>
+                <p>Our goal is to launch</p>
+            </div>
+            <div id="goals">
+                <h1>Goals</h1>
+                <p>goals</p>
+            </div>
+            <div id="team">
+                <h1>Meet our Team</h1>
+                <p>desc</p>
+                <div id="flex">
+                    <div>
+                        <img src="./124801497.jpg">
+                        <h3>Luiggy P. Garcia</h3>
+                        <span>cargo</span>
+                        <p>person</p>
+                    </div>
+                    <div>
+                        <img src="./124801497.jpg">
+                        <h3>Paulo Augusto</h3>
+                        <span>cargo</span>
+                        <p>person</p>
+                    </div>
+                    <div>
+                        <img src="./124801497.jpg">
+                        <h3>Pedro de Sene</h3>
+                        <span>cargo</span>
+                        <p>person</p>
+                    </div>
+                    <div>
+                        <img src="./124801497.jpg">
+                        <h3>Paulo Henrique</h3>
+                        <span>cargo</span>
+                        <p>person</p>
+                    </div>
+                    <div>
+                        <img src="./124801497.jpg">
+                        <h3>Nicolas Augusto</h3>
+                        <span>cargo</span>
+                        <p>eeeee</p>
+                    </div>
+                </div>
+                <div id="contact">
+                    <h1>Contact</h1>
+                    <p>You can email us at: <a href="mailto:example@example.com">example@example.com</a></p>
+                </div>
+            </div>
         </div>
-        <img src="./124801497.jpg" alt="">
-        <div id="about">
-            <h1>Sobre:</h1>
-            <p>somos</p>
-        </div>
+        <footer id="footer">
+            <span>Language: </span>
+            <select id="lang">
+                <option value="en">English</option>
+                <option value="pt">Portuguese</option>
+            </select>
+        </footer>
     </div>
 </body>
 </html>
