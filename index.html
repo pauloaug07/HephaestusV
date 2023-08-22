@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="alternate" hreflang="en" href="/en-us"> -->
-    <!-- <link rel="alternate" hreflang="pt" href="/pt-br"> -->
+    <link rel="alternate" hreflang="en" href="/en-us/">
+    <link rel="alternate" hreflang="pt" href="/pt-br/">
     <title>Document</title>
 </head>
 <body>
     <style>
         body {
-            /* font-family: Arial, Helvetica, sans-serif; */
+            font-family: Arial, Helvetica, sans-serif;
             margin: 0em;
         }
         #title {
-            height: 4.7em;
+            height: 4.75em;
             position: sticky;
             top: 0em;
             background-color: white;
@@ -56,18 +56,41 @@
             animation-fill-mode: both;
             animation-direction: alternate;
         }
-        #title h1 {
+        #title #logo {
             float: left;
             margin-left: 1em;
             margin-right: 1em;
-            margin-top: .525em;
+            margin-top: .675em;
+            font-size: 2em;
+            font-weight: bold;
+            text-decoration: none;
+            color: black;
         }
         #banner {
             padding: 0em;
         }
-        #banner img {
-            width: 100%;
-            height: 40em;
+        hr {
+            margin: .05em;
+        }
+        #banner {
+            text-align: center;
+            padding: 15%;
+            background-image: url(./124801497.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #banner p {
+            margin: 0em;
+            font-size: 3em;
+        }
+        #banner a {
+            cursor: pointer;
+            color: white;
+            background-color: black;
+            display: inline-block;
+            padding: .5em;
+            border: 1px solid black;
+            border-radius: .5em;
         }
         #content div {
             padding-left: 1em;
@@ -94,7 +117,7 @@
         }
         #about #a {
             padding-left: .2em;
-            color: rgb(200, 0, 0);
+            color: red;
         }
         #team #flex {
             display: flex;
@@ -136,7 +159,7 @@
     <div id="main">
         <header id="header">
             <div id="title">
-                <h1>Hephaestus V</h1>
+                <a id="logo" href="#main">Hephaestus V</a>
                 <nav>
                     <a href="#about">About</a>
                     <a href="#goals">Goals</a>
@@ -144,22 +167,31 @@
                     <a href="#contact">Contact</a>
                 </nav>
             </div>
+            <hr>
             <div id="banner">
-                <img src="./124801497.jpg" alt="">
+                <p>Meet our latest Rocket</p>
+                <a>Read more</a>
+                <!-- <img src="./124801497.jpg" alt=""> -->
             </div>
         </header>
         <div id="content">
             <div id="about">
                 <h1>We're a team of</h1> <h1 id="a">Students</h1>
-                <p>Our goal is to launch</p>
+                <p>Our <a href="#goals">goal</a> is to launch</p>
             </div>
             <div id="goals">
                 <h1>Goals</h1>
-                <p>goals</p>
+                <p>
+                    <ul>
+                        <li>a</li>
+                        <li>b</li>
+                        <li>c</li>
+                    </ul>
+                </p>
             </div>
             <div id="team">
                 <h1>Meet our Team</h1>
-                <p>desc</p>
+                <p>Meet the team behind the Hephaestus project:</p>
                 <div id="flex">
                     <div>
                         <img src="./124801497.jpg">
