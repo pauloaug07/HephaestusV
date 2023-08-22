@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="alternate" hreflang="en" href="/en-us/">
     <link rel="alternate" hreflang="pt" href="/pt-br/">
+    <link rel="shortcut icon" href="./img/logo.png" type="image/png">
     <title>Hephaestus V</title>
 </head>
 <body>
@@ -21,14 +22,13 @@
             background-color: white;
         }
         #title nav {
-            float: right;
             margin-right: 1em;
             margin-left: 1em;
             font-size: 1.5em;
             margin-top: 1em;
             margin-bottom: 1em;
         }
-        @media (max-width: 615px) {
+        @media (max-width: 695px) {
             #title nav {
                 display: none;
             }
@@ -56,21 +56,23 @@
             animation-fill-mode: both;
             animation-direction: alternate;
         }
+        #title {
+            display: flex;
+            justify-content: space-between;
+        }
         #title #logo {
-            float: left;
-            margin-left: 1em;
-            margin-right: 1em;
-            margin-top: .675em;
+            display: flex;
+            align-items: center;
+        }
+        #title #logo a {
+            margin-left: .5em;
             font-size: 2em;
             font-weight: bold;
             text-decoration: none;
             color: black;
         }
-        #banner {
-            padding: 0em;
-        }
-        hr {
-            margin: .05em;
+        #title #logo img {
+            width: 4.75em;
         }
         #banner {
             text-align: center;
@@ -170,17 +172,19 @@
     <div id="main">
         <header id="header">
             <div id="title">
-                <a id="logo" href="#main">Hephaestus V</a>
-                <nav>
+                <div id="logo">
+                    <img src="./img/logo.png">
+                    <a href="#main">Hephaestus V</a>
+                </div>
+                <nav id="nav">
                     <a href="#about">About</a>
                     <a href="#goals">Goals</a>
                     <a href="#team">Team</a>
                     <a href="#contact">Contact</a>
                 </nav>
             </div>
-            <hr>
             <div id="banner">
-                <h1>Meet our latest Rocket</h1>
+                <h1>Meet our latest Prototype</h1>
                 <p>Small, Fast, Portable</p>
                 <a>Read more</a>
                 <!-- <img src="./124801497.jpg" alt=""> -->
@@ -194,10 +198,11 @@
             <div id="goals">
                 <h1>Goals</h1>
                 <p>
+                    Our goals are:
                     <ul>
-                        <li>a</li>
-                        <li>b</li>
-                        <li>c</li>
+                        <li>Provide a cheaper solution to rocketing;</li>
+                        <li>b;</li>
+                        <li>c;</li>
                     </ul>
                 </p>
             </div>
@@ -238,7 +243,7 @@
                 </div>
                 <div id="contact">
                     <h1>Contact</h1>
-                    <p>You can email us at: <a href="mailto:example@example.com">example@example.com</a></p>
+                    <p>You can email us at: <a href="mailto:example@example.com">example@example.com</a>.</p>
                 </div>
             </div>
         </div>
