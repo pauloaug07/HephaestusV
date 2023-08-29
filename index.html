@@ -16,19 +16,26 @@
             margin: 0em;
         }
         #title {
+            display: flex;
+            justify-content: space-between;
             height: 4.75em;
             position: sticky;
             top: 0em;
             background-color: white;
         }
         #title nav {
-            margin-right: 1em;
-            margin-left: 1em;
+            display: flex;
+            align-items: center;
             font-size: 1.5em;
-            margin-top: 1em;
-            margin-bottom: 1em;
+            margin-right: .5em;
         }
-        @media (max-width: 695px) {
+        #title nav * {
+            text-align: center;
+            width: 4em;
+            margin-left: .25em;
+            margin-right: .25em;
+        }
+        @media (max-width: 815px) {
             #title nav {
                 display: none;
             }
@@ -42,23 +49,21 @@
         }
         @keyframes nav {
             from {
-                color: black;
-                background-color: white;
+                color: var(--color);
+                background-color: var(--background);
             }
             to {
-                color: white;
-                background-color: black;
+                color: var(--background);
+                background-color: var(--color);
             }
         }
         #title nav a:hover {
             cursor: pointer;
-            animation: nav 150ms ease-in-out;
+            --color: black;
+            --background: white;
+            animation: nav 150ms ease-out;
             animation-fill-mode: both;
             animation-direction: alternate;
-        }
-        #title {
-            display: flex;
-            justify-content: space-between;
         }
         #title #logo {
             display: flex;
@@ -101,6 +106,12 @@
             border: 1px solid black;
             border-radius: .5em;
             margin-top: .5em;
+        }
+        #banner a:hover {
+            --color: white;
+            --background: black;
+            animation: nav 150ms ease-out;
+            animation-fill-mode: both;
         }
         #content div {
             padding-left: 1em;
@@ -161,12 +172,25 @@
             border-radius: 1em;
         }
         #team #flex div img {
+            width: 12.5em;
+            height: 12.5em;
             border-radius: .5em;
         }
         #footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             color: white;
             background-color: black;
             padding: 2em;
+        }
+        #footer select {
+            outline: none;
+        }
+        #footer p {
+            margin: 0em;
+            font-weight: bold;
+            font-style: italic;
         }
     </style>
     <div id="main">
@@ -211,7 +235,7 @@
                 <div id="flex">
                     <div>
                         <img src="./img/124801497.jpg">
-                        <h3>Luiggy P. Garcia</h3>
+                        <h3>Luiggy Garcia</h3>
                         <span>Website</span>
                         <p>en</p>
                     </div>
@@ -247,11 +271,14 @@
             </div>
         </div>
         <footer id="footer">
-            <span>Language: </span>
-            <select id="lang">
-                <option value="en">English</option>
-                <option value="pt">Portuguese</option>
-            </select>
+            <div>
+                <span>Language: </span>
+                <select id="lang">
+                    <option value="en">English</option>
+                    <option value="pt">Portuguese</option>
+                </select>
+            </div>
+            <p>Hephaestus V</p>
         </footer>
     </div>
 </body>
