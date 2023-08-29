@@ -198,6 +198,14 @@
             font-style: italic;
         }
     </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const lang = document.getElementById('lang');
+            lang.addEventListener('change', () => {
+                window.location.href = '/HephaestusV/' + lang.value + '/';
+            });
+        });
+    </script>
     <div id="main">
         <header id="header">
             <div id="title">
@@ -280,8 +288,8 @@
             <div>
                 <span>Language: </span>
                 <select id="lang">
-                    <option value="en">English</option>
-                    <option value="pt">Portuguese</option>
+                    <option value="en-us">English</option>
+                    <option value="pt-br">Portuguese</option>
                 </select>
             </div>
             <p>Hephaestus V</p>
