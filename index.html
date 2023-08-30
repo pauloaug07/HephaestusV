@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="alternate" hreflang="en" href="/en-us/">
+    <link rel="alternate" hreflang="pt" href="/pt-br/">
+    <title>Hephaestus V</title>
+</head>
+<body>
+    <script>
+        if (navigator.language.startsWith('pt')) {
+            window.location.href = './pt-br/index.html';
+        } else {
+            window.location.href = './en-us/index.html';
+        }
+    </script>
+    <noscript>
+        <a href="./en-us/index.html">English</a>
+        <a href="./pt-br/index.html">Portuguese</a>
+    </noscript>
+</body>
+</html>
