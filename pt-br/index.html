@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="alternate" hreflang="en" href="/en-us/">
+    <link rel="alternate" hreflang="pt" href="/pt-br/">
+    <link rel="shortcut icon" href="../img/logo.png" type="image/png">
+    <title>Hephaestus V</title>
+</head>
+<body>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0em;
+        }
+        #title {
+            display: flex;
+            justify-content: space-between;
+            height: 4.75em;
+            position: sticky;
+            top: 0em;
+            background-color: white;
+        }
+        #title nav {
+            display: flex;
+            align-items: center;
+            font-size: 1.5em;
+            margin-right: .5em;
+        }
+        #title nav * {
+            text-align: center;
+            width: 4em;
+            margin-left: .25em;
+            margin-right: .25em;
+        }
+        @media (max-width: 815px) {
+            #title nav {
+                display: none;
+            }
+        }
+        #title nav a {
+            color: black;
+            text-decoration: none;
+            padding: .25em;
+            border: 1px solid black;
+            border-radius: .25em;
+        }
+        @keyframes nav {
+            from {
+                color: var(--color);
+                background-color: var(--background);
+            }
+            to {
+                color: var(--background);
+                background-color: var(--color);
+            }
+        }
+        #title nav a:hover {
+            cursor: pointer;
+            --color: black;
+            --background: white;
+            animation: nav 150ms ease-out;
+            animation-fill-mode: both;
+            animation-direction: alternate;
+        }
+        #title #logo {
+            display: flex;
+            align-items: center;
+        }
+        #title #logo a {
+            margin-left: .5em;
+            font-size: 2em;
+            font-weight: bold;
+            text-decoration: none;
+            color: black;
+        }
+        #title #logo img {
+            width: 4.75em;
+        }
+        #banner {
+            text-align: center;
+            color: white;
+            padding: 15%;
+            background-image: url(../img/rocket.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #banner * {
+            margin: .1em;
+        }
+        #banner h1 {
+            font-size: 3em;
+        }
+        #banner p {
+            font-style: italic;
+            font-size: 1.5em;
+        }
+        #banner a {
+            cursor: pointer;
+            color: white;
+            background-color: black;
+            display: inline-block;
+            padding: .5em;
+            border: 1px solid black;
+            border-radius: .5em;
+            margin-top: .5em;
+        }
+        #banner a:hover {
+            --color: white;
+            --background: black;
+            animation: nav 150ms ease-out;
+            animation-fill-mode: both;
+        }
+        #content div {
+            padding-left: 1em;
+            padding-right: 1em;
+        }
+        #content div p {
+            padding-left: 1em;
+            padding-right: 1em;
+        }
+        #content div h1 {
+            border-bottom: 1px solid black;
+        }
+        #about {
+            color: white;
+            background-color: black;
+            font-size: 1.5em;
+            text-align: center;
+            padding: 2.5em;
+            margin: 0em;
+        }
+        #about h1 {
+            display: inline-block;
+            margin: 0em;
+        }
+        #about #a {
+            padding-left: .2em;
+            color: red;
+        }
+        #about iframe {
+            display: inline-block;
+            width: 25em;
+            height: 15em;
+        }
+        #team #flex {
+            display: flex;
+            overflow: auto;
+            justify-content: space-between;
+            text-align: center;
+        }
+        #team #flex div {
+            margin: .1em;
+        }
+        #team #flex div h3 {
+            margin: 0em;
+        }
+        #team #flex div p {
+            max-width: 12em;
+            padding: 1em;
+            padding-top: .25em;
+            padding-bottom: .25em;
+            margin: 0em;
+            overflow-wrap: break-word;
+        }
+        #team #flex div span {
+            color: red;
+            background-color: black;
+            display: inline-block;
+            margin-top: .2em;
+            padding: .1em;
+            padding-left: .5em;
+            padding-right: .5em;
+            border: 1px solid black;
+            border-radius: 1em;
+        }
+        #team #flex div img {
+            width: 12.5em;
+            height: 12.5em;
+            border-radius: .5em;
+        }
+        #footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            background-color: black;
+            padding: 2em;
+        }
+        #footer select {
+            outline: none;
+        }
+        #footer p {
+            margin: 0em;
+            font-weight: bold;
+            font-style: italic;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const lang = document.getElementById('lang');
+            lang.addEventListener('change', () => {
+                window.location.href = '/HephaestusV/' + lang.value + '/';
+            });
+        });
+    </script>
+    <div id="main">
+        <header id="header">
+            <div id="title">
+                <div id="logo">
+                    <img src="../img/logo.png">
+                    <a href="#main">Hephaestus V</a>
+                </div>
+                <nav id="nav">
+                    <a href="#about">Sobre</a>
+                    <a href="#goals">Objetivos</a>
+                    <a href="#team">Time</a>
+                    <a href="#contact">Contato</a>
+                </nav>
+            </div>
+            <div id="banner">
+                <h1>Conheça nosso Protótipo</h1>
+                <p>Pequeno, Rápido, Portátil</p>
+                <a href="./rocket.html">Saiba mais</a>
+            </div>
+        </header>
+        <div id="content">
+            <div id="about">
+                <h1>Somos um time de</h1> <h1 id="a">Estudantes</h1>
+                <p>Nosso <a href="#goals">objetivo</a> é lançar pequenos porém eficazes foguetes</p>
+                <iframe loading="lazy" src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFmdRJLGfU&#x2F;view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
+            </div>
+            <div id="goals">
+                <h1>Objetivos</h1>
+                <p>
+                    Nossos objetivos são:
+                    <ul>
+                        <li>Fazer com que foguetes se tornem um métido viável de lançamentos;</li>
+                        <li>Trazer uma visão mais sustentável a foguetes.</li>
+                    </ul>
+                </p>
+            </div>
+            <div id="team">
+                <h1>Conheça nosso Time</h1>
+                <p>Conheça o time responsável pelo projeto Hephaestus V:</p>
+                <div id="flex">
+                    <div>
+                        <img src="../img/luiggy-garcia.jpg">
+                        <h3>Luiggy Garcia</h3>
+                        <span>Website</span>
+                        <p>Sou Luiggy, tenho 15 anos. Atualmente estudo na Etec MCM.</p>
+                    </div>
+                    <div>
+                        <img src="../img/paulo-augusto.jpg">
+                        <h3>Paulo Augusto</h3>
+                        <span>Content</span>
+                        <p>Me chamo Paulo e tenho 15 anos. Gosto de futebol, jogos e música.</p>
+                    </div>
+                    <div>
+                        <img src="../img/pedro-sene.jpg">
+                        <h3>Pedro de Sene</h3>
+                        <span>Video</span>
+                        <p>Me chamo Pedro, tenho 16 anos. Gosto de futebol e tocar guitarra.</p>
+                    </div>
+                    <div>
+                        <img src="../img/nicolas-augusto.jpg">
+                        <h3>Nicolas Augusto</h3>
+                        <span>Physics</span>
+                        <p>Me chamo Nicolas, tenho 16 anos. Gosto da área de T.I.</p>
+                    </div>
+                    <div>
+                        <img src="../img/paulo-henrique.jpg">
+                        <h3>Paulo Henrique</h3>
+                        <span>Moral Support</span>
+                        <p>Me chamo Paulo e tenho 15 anos. Sou cristão, gosto de academia.</p>
+                    </div>
+                </div>
+                <div id="contact">
+                    <h1>Contact</h1>
+                    <p>
+                        Atualmente não temos um método de comunicação oficial, porém, sinta-se livre
+                        para abrir um <i>issue</i> no nosso <a href="https://github.com/pauloaug07/HephaestusV/">repositório do Github</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+            <div>
+                <span>Linguágem: </span>
+                <select id="lang">
+                    <option value="pt-br">Portuguese</option>
+                    <option value="en-us">English</option>
+                </select>
+            </div>
+            <p>Hephaestus V</p>
+        </footer>
+    </div>
+</body>
+</html>
