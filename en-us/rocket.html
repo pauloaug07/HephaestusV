@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="alternate" hreflang="en" href="/en-us/">
+    <link rel="alternate" hreflang="pt" href="/pt-br/">
+    <link rel="shortcut icon" href="./img/logo.png" type="image/png">
+    <title>Prototype 1 - Hephaestus V</title>
+</head>
+<body>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0em;
+        }
+        #title {
+            display: flex;
+            justify-content: space-between;
+            height: 4.75em;
+            position: sticky;
+            top: 0em;
+            background-color: white;
+        }
+        #title h1 {
+            padding-left: 1em;
+            padding-right: 1em;
+            font-style: italic;
+        }
+        @keyframes nav {
+            from {
+                color: var(--color);
+                background-color: var(--background);
+            }
+            to {
+                color: var(--background);
+                background-color: var(--color);
+            }
+        }
+        #title #logo {
+            display: flex;
+            align-items: center;
+        }
+        #title #logo a {
+            margin-left: .5em;
+            font-size: 2em;
+            font-weight: bold;
+            text-decoration: none;
+            color: black;
+        }
+        #title #logo img {
+            width: 4.75em;
+        }
+        #banner {
+            color: white;
+            padding: 15%;
+            background-color: black;
+            background-image: url(./img/rocket-banner.png);
+            background-position-x: -50em;
+            background-position-y: 12.5em;
+            background-repeat: no-repeat;
+        }
+        #banner * {
+            margin: .1em;
+        }
+        #banner h1 {
+            font-size: 3em;
+        }
+        #banner p {
+            font-style: italic;
+            font-size: 1.5em;
+        }
+        #banner a {
+            cursor: pointer;
+            color: white;
+            background-color: black;
+            display: inline-block;
+            padding: .5em;
+            border: 1px solid black;
+            border-radius: .5em;
+            margin-top: .5em;
+        }
+        #banner a:hover {
+            --color: white;
+            --background: black;
+            animation: nav 150ms ease-out;
+            animation-fill-mode: both;
+        }
+        #content div {
+            padding-left: 1em;
+            padding-right: 1em;
+        }
+        #content div p {
+            padding-left: 1em;
+            padding-right: 1em;
+        }
+        #content div h1 {
+            border-bottom: 1px solid black;
+        }
+        #design img {
+            width: 75em;
+            display: block;
+        }
+        #footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            background-color: black;
+            padding: 2em;
+        }
+        #footer select {
+            outline: none;
+        }
+        #footer p {
+            margin: 0em;
+            font-weight: bold;
+            font-style: italic;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const lang = document.getElementById('lang');
+            lang.addEventListener('change', () => {
+                window.location.href = '/HephaestusV/' + lang.value + '/';
+            });
+        });
+    </script>
+    <div id="main">
+        <header id="header">
+            <div id="title">
+                <div id="logo">
+                    <img src="./img/logo.png">
+                    <a href="/HephaestusV/index.html">Hephaestus V</a>
+                </div>
+                <h1>Prototype</h1>
+            </div>
+            <div id="banner">
+                <h1>Prototype 1</h1>
+                <p>Small, Fast, Portable</p>
+            </div>
+        </header>
+        <div id="content">
+            <div id="design">
+                <h1>Design</h1>
+                <p>
+                    We opted for a classic cone-shaped-tip long-body rocket which is ideal for our
+                    current scale.
+                </p>
+                <img src="./img/design.png" alt="">
+                <p>Measurements:</p>
+                <ul>
+                    <li>Tip length: 15cm;</li>
+                    <li>Body length: 1m;</li>
+                    <li>Fin length (4): 10cm.</li>
+                </ul>
+                <p>Added length: 1.55m.</p>
+                <p>
+                    Considering the materais we're planning on using, it should be relatively
+                    light and inexpensive to manufacture.
+                </p>
+            </div>
+            <div id="materials">
+                <h1>Materials</h1>
+                <p>
+                    <p>
+                        As mentioned earlier, our goal is to provide a cheaper, greener alternative to
+                        small-scale rocketing.
+                    </p>
+                    <p>We're aiming to build the rocket with the following materials:</p>
+                    <ul>
+                        <li>Cardboard;</li>
+                        <li>Plastic.</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+        <footer id="footer">
+            <div>
+                <span>Language: </span>
+                <select id="lang">
+                    <option value="en-us">English</option>
+                    <option value="pt-br">Portuguese</option>
+                </select>
+            </div>
+            <p>Hephaestus V</p>
+        </footer>
+    </div>
+</body>
+</html>
