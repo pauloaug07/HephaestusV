@@ -1,0 +1,9 @@
+Arduino é uma plataforma que possibilita o desenvolvimento de projetos eletrônicos. Em outras palavras, é uma plataforma de prototipagem eletrônica.
+
+O Arduino é constituído de hardware e software, tornando assim possível a realização de diversos projetos tecnológicos.
+
+A placa tem como principal componente o microcontrolador, que é um tipo de processador bem menor do que o convencional.
+
+O microcontrolador executa os programas e avalia qualidade das entradas e saídas, ou seja, dos canais pelos quais é possível a comunicação entre mundo externo e digital.
+
+O Arduino é uma placa open-source. Sendo assim, toda a propriedade intelectual é compartilhada entre os usuários. Os usuários então compartilham soluções em códigos para aprimoramentos da plataforma.
