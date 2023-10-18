@@ -1,0 +1,71 @@
+// C++ code
+//
+int led_green = 1;
+int led_yellow = 2;
+int led_red = 3;
+int led_green2 = 4;
+int led_yellow2 = 5;
+int led_red2 = 6;
+int led_green3 = 7;
+int led_yellow3 = 8;
+int led_red3 = 9;
+
+void setup()
+{
+  pinMode(led_green, OUTPUT);
+  pinMode(led_yellow, OUTPUT);
+  pinMode(led_red, OUTPUT);
+  pinMode(led_green2, OUTPUT);
+  pinMode(led_yellow2, OUTPUT);
+  pinMode(led_red2, OUTPUT);
+  pinMode(led_green3, OUTPUT);
+  pinMode(led_yellow3, OUTPUT);
+  pinMode(led_red3, OUTPUT);
+}
+
+void loop()
+{
+  digitalWrite(led_green, HIGH);
+  digitalWrite(led_yellow, LOW);
+  digitalWrite(led_red, LOW);
+  digitalWrite(led_green2, LOW);
+  digitalWrite(led_yellow2, LOW);
+  digitalWrite(led_red2, HIGH);
+  digitalWrite(led_green3, HIGH);
+  digitalWrite(led_yellow3, LOW);
+  digitalWrite(led_red3,LOW);
+  delay(1500); // Wait for 1500 millisecond(s)
+ 
+  digitalWrite(led_green, LOW);
+  digitalWrite(led_yellow, HIGH);
+  digitalWrite(led_red, LOW);
+  digitalWrite(led_green2, LOW);
+  digitalWrite(led_yellow2, LOW);
+  digitalWrite(led_red2, HIGH);
+  digitalWrite(led_green3, LOW);
+  digitalWrite(led_yellow3, HIGH);
+  digitalWrite(led_red3,LOW);
+  delay(1500); // Wait for 1500 millisecond(s)
+  
+  digitalWrite(led_green, LOW);
+  digitalWrite(led_yellow, LOW);
+  digitalWrite(led_red, HIGH);
+  digitalWrite(led_green2, HIGH);
+  digitalWrite(led_yellow2, LOW);
+  digitalWrite(led_red2, LOW);
+  digitalWrite(led_green3, LOW);
+  digitalWrite(led_yellow3, LOW);
+  digitalWrite(led_red3, HIGH);
+  delay(1500); // Wait for 1500 millisecond(s)
+
+  digitalWrite(led_green, LOW);
+  digitalWrite(led_yellow, LOW);
+  digitalWrite(led_red, HIGH);
+  digitalWrite(led_green2, LOW);
+  digitalWrite(led_yellow2, HIGH);
+  digitalWrite(led_red2, LOW);
+  digitalWrite(led_green3, LOW);
+  digitalWrite(led_yellow3, LOW);
+  digitalWrite(led_red3, HIGH);
+  delay(1500); // Wait for 1500 millisecond(s)
+}

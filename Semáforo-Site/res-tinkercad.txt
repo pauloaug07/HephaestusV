@@ -1,0 +1,2 @@
+Para o nosso projeto, estamos utilizando o software Tinkercad, segue resumo sobre o mesmo.
+	O Tinkercad é um aplicativo online e gratuito desenvolvido pela Autodesk. Foi feito para a criação e design de modelos 3D, mas também é possível desenvolver circuitos eletrônicos na plataforma. Por ser intuitiva e fácil de usar, é um recurso excelente para alunos, professores e projetistas iniciantes. O Tinkercad possui bibliotecas para Arduino e Micro:bit integradas, facilitando ainda mais o desenvolvimento de projetos.
