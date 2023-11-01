@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="alternate" hreflang="en" href="/en-us/">
+    <link rel="alternate" hreflang="pt" href="/pt-br/">
+    <link rel="shortcut icon" href="../img/logo.png" type="image/png">
+    <title>Semáforo - Hephaestus V</title>
+</head>
+<body>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0em;
+        }
+        #title {
+            display: flex;
+            justify-content: space-between;
+            height: 4.75em;
+            position: sticky;
+            top: 0em;
+            background-color: white;
+        }
+        #title h1 {
+            padding-left: 1em;
+            padding-right: 1em;
+            font-style: italic;
+        }
+        @media (max-width: 540px) {
+            #title h1 {
+                display: none;
+            }
+        }
+        @keyframes nav {
+            from {
+                color: var(--color);
+                background-color: var(--background);
+            }
+            to {
+                color: var(--background);
+                background-color: var(--color);
+            }
+        }
+        #title #logo {
+            display: flex;
+            align-items: center;
+        }
+        #title #logo a {
+            margin-left: .5em;
+            font-size: 2em;
+            font-weight: bold;
+            text-decoration: none;
+            color: black;
+        }
+        #title #logo img {
+            width: 4.75em;
+        }
+        #banner {
+            display: flex;
+            justify-content: center;
+            color: white;
+            padding-top: 13em;
+            padding-bottom: 13em;
+            background-color: black;
+            background-repeat: no-repeat;
+        }
+        #banner h1 {
+            font-size: 3em;
+        }
+        #banner p {
+            font-style: italic;
+            font-size: 1.5em;
+        }
+        #banner a {
+            cursor: pointer;
+            color: white;
+            background-color: black;
+            display: inline-block;
+            padding: .5em;
+            border: 1px solid black;
+            border-radius: .5em;
+            margin-top: .5em;
+        }
+        #banner a:hover {
+            --color: white;
+            --background: black;
+            animation: nav 150ms ease-out;
+            animation-fill-mode: both;
+        }
+        #content div figure {
+            text-align: center;
+        }
+        #content div figure img {
+            display: inline-block;
+        }
+        #content div {
+            padding-left: 1em;
+            padding-right: 1em;
+        }
+        #content div p {
+            padding-left: 1em;
+            padding-right: 1em;
+        }
+        #content div h1 {
+            border-bottom: 1px solid black;
+        }
+        #design img {
+            width: 90%;
+            display: block;
+        }
+        #footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            background-color: black;
+            padding: 2em;
+        }
+        #footer select {
+            outline: none;
+        }
+        #footer p {
+            margin: 0em;
+            font-weight: bold;
+            font-style: italic;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const lang = document.getElementById('lang');
+            lang.addEventListener('change', () => {
+                window.location.href = '/HephaestusV/' + lang.value + '/';
+            });
+        });
+    </script>
+    <div id="main">
+        <header id="header">
+            <div id="title">
+                <div id="logo">
+                    <img src="../img/logo.png">
+                    <a href="/HephaestusV/index.html">Hephaestus V</a>
+                </div>
+                <h1>Semáforo</h1>
+            </div>
+            <div id="banner">
+                <h1>Atividade: Semáforo</h1>
+            </div>
+        </header>
+        <div id="content">
+            <div id="arduino">
+                <h1>Placa Arduino</h1>
+                <figure>
+                    <img src="../img/tinkercad.png" width="75%" height="75%">
+                </figure>
+                <p>O Arduino é uma placa de prototipagem eletrônica de código aberto (open-source) e hardware livre, agora, vamos fragmentar essa mensagem para realmente absorver qual é sua função. O Arduino, como dito anteriormente, é uma plataforma que possibilita o desenvolvimento de projetos eletrônicos, perfeito para a produção com baixo custo e tempo de desenvolvimento, sendo muito útil para desenvolvedores iniciantes. O Arduino possui tanto o Hardware quanto um Software, permitindo uma maior variedade na produção de projetos. Possui Hardware livre e Código Open-Source, permitindo que os desenvolvedores possam copiar, redistribuir com ou sem alterações, tanto o hardware quanto o software, que está disponibilizado de forma gratuita.</p>
+            </div>
+            <div id="tinkercad">
+                <h1>Projeto Tinkercad</h1>
+                <p>Para o nosso projeto, estamos utilizando o software Tinkercad, segue resumo sobre o mesmo.
+                O Tinkercad é um aplicativo online e gratuito desenvolvido pela Autodesk. Foi feito para a criação e design de modelos 3D, mas também é possível desenvolver circuitos eletrônicos na plataforma. Por ser intuitiva e fácil de usar, é um recurso excelente para alunos, professores e projetistas iniciantes. O Tinkercad possui bibliotecas para Arduino e Micro:bit integradas, facilitando ainda mais o desenvolvimento de projetos.</p>
+                <figure>
+                    <img src="../img/semaforo.drawio.png" width="75%" height="75%">
+                </figure>
+                <figure>
+                    <textarea cols="75" rows="10" readonly>
+                        // C++ code
+//
+int led_green = 1;
+int led_yellow = 2;
+int led_red = 3;
+int led_green2 = 4;
+int led_yellow2 = 5;
+int led_red2 = 6;
+int led_green3 = 7;
+int led_yellow3 = 8;
+int led_red3 = 9;
+
+void setup()
+{
+  pinMode(led_green, OUTPUT);
+  pinMode(led_yellow, OUTPUT);
+  pinMode(led_red, OUTPUT);
+  pinMode(led_green2, OUTPUT);
+  pinMode(led_yellow2, OUTPUT);
+  pinMode(led_red2, OUTPUT);
+  pinMode(led_green3, OUTPUT);
+  pinMode(led_yellow3, OUTPUT);
+  pinMode(led_red3, OUTPUT);
+}
+
+void loop()
+{
+  digitalWrite(led_green, HIGH);
+  digitalWrite(led_yellow, LOW);
+  digitalWrite(led_red, LOW);
+  digitalWrite(led_green2, LOW);
+  digitalWrite(led_yellow2, LOW);
+  digitalWrite(led_red2, HIGH);
+  digitalWrite(led_green3, HIGH);
+  digitalWrite(led_yellow3, LOW);
+  digitalWrite(led_red3,LOW);
+  delay(1500); // Wait for 1500 millisecond(s)
+ 
+  digitalWrite(led_green, LOW);
+  digitalWrite(led_yellow, HIGH);
+  digitalWrite(led_red, LOW);
+  digitalWrite(led_green2, LOW);
+  digitalWrite(led_yellow2, LOW);
+  digitalWrite(led_red2, HIGH);
+  digitalWrite(led_green3, LOW);
+  digitalWrite(led_yellow3, HIGH);
+  digitalWrite(led_red3,LOW);
+  delay(1500); // Wait for 1500 millisecond(s)
+  
+  digitalWrite(led_green, LOW);
+  digitalWrite(led_yellow, LOW);
+  digitalWrite(led_red, HIGH);
+  digitalWrite(led_green2, HIGH);
+  digitalWrite(led_yellow2, LOW);
+  digitalWrite(led_red2, LOW);
+  digitalWrite(led_green3, LOW);
+  digitalWrite(led_yellow3, LOW);
+  digitalWrite(led_red3, HIGH);
+  delay(1500); // Wait for 1500 millisecond(s)
+
+  digitalWrite(led_green, LOW);
+  digitalWrite(led_yellow, LOW);
+  digitalWrite(led_red, HIGH);
+  digitalWrite(led_green2, LOW);
+  digitalWrite(led_yellow2, HIGH);
+  digitalWrite(led_red2, LOW);
+  digitalWrite(led_green3, LOW);
+  digitalWrite(led_yellow3, LOW);
+  digitalWrite(led_red3, HIGH);
+  delay(1500); // Wait for 1500 millisecond(s)
+}
+                    </textarea>
+                </figure>
+            </div>
+        <footer id="footer">
+            <div>
+                <span>Linguagem: </span>
+                <select id="lang">
+                    <option value="pt-br">Portuguese</option>
+                    <option value="en-us">English</option>
+                </select>
+            </div>
+            <p>Hephaestus V</p>
+        </footer>
+    </div>
+</body>
+</html>
